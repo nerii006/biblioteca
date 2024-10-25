@@ -13,7 +13,7 @@
         <nav class="navbar">
             <img id="logo" src="./img/logoenet.png" alt="">
             <a href="#">Libros</a>
-            <a href="#">Mis Reservas</a>
+            <a href="#reservas.php">Mis Reservas</a>
             <a href="#">Manual de Uso</a>
             <a href="#contacto">Contacto</a>                    
         </nav>
