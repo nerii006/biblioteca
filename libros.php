@@ -18,6 +18,7 @@
         </nav>
     </header>
  <h1>Libros</h1>
+    
     <div class="libreria">
         <div class="libro terror">Terror</div>
         <div class="libro comedia">Comedia</div>
@@ -56,9 +57,9 @@
     <div class="terrorlibro">
         <h2>Terror</h2>
     <div class="card" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-            <img src="./img/Dracula.webp" class="portadas">
+        <div class="contenedorlibro">
+            <div class="imagen">
+                <img src="./img/Dracula.webp" class="portadas">
             </div>
             <div class="col-md-8">
             <div class="card-body">
@@ -67,7 +68,8 @@
             </div>
             </div>
         </div>
-        <div class="card" style="max-width: 540px;">
+    </div> 
+    <div class="card" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
             <img src="./img/dentrodemi.webp" class="portadas">
@@ -78,7 +80,8 @@
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
             </div>
-        </div>    
+        </div>
+       
         
 
 
