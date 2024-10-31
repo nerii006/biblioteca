@@ -44,6 +44,9 @@ body {
     text-orientation:sideways; 
 }
 
+.libro:hover{
+    transform: scale(1,1);
+}
 .terror {
     background-color: #8b0000;
     transform: rotate(-5deg);
@@ -78,22 +81,52 @@ body {
     background-color: #c0c0c0;
 }
 
-.terrorlibro{
+.librosterror{
     width: 700px;
     height: 30%;
+    border-radius: 30px;
     background-color: aliceblue;
 }
 
+h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 .card {
-    border: solid gray;
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+b{
+    font-size: 21px;
+    color: #1e90ff;
+}
+
+.cuerpo{
+    margin: 10px;
+    text-align: justify;
+}
+.contenedorlibro {
+    display: flex;
     margin: 10px;
 }
 
-.contenedorlibro {
-    display: flex;
-}
 .portadas{
-    margin-left: 20px;
     height: 280px;
     width: 200px;
+}
+
+button{
+    margin-left: 160px;
+    font-size: 15px;
+    background-color: #9992f5;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px solid rgb(32, 94, 151);
+    height: 30px;
+    margin-top: 20px;
 }

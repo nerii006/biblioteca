@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./estilos/general.css">
     <link rel="stylesheet" href="./estilos/nav.css">
     <link rel="stylesheet" href="./estilos/form.css">
+    <link rel="stylesheet" href="./estilos/footer.css">
 </head>
 <body>
     <header>
@@ -41,5 +42,20 @@
         </form> 
 
     </div>
+
+    <footer>
+            <div id="contacto" class="footer-content">
+                <h3>HAPPY HOUR</h3>
+                <p>El mejor lugar para disfrutar de comidas ríquisimas y pasar momentos inolvidables. ¡Te esperamos!</p>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/?locale=es_LA"><img src="img/BiFacebook.svg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="img/WhhCallalt.svg" alt="Numero"></a>03385-406682</li>
+                    <li><a href="https://www.instagram.com/"><img src="img/BiInstagram.svg" alt="Instagram"></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HAPPY HOUR | Todos los derechos reservados.</p>
+            </div>
+        </footer>
 </body>
 </html>

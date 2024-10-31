@@ -6,6 +6,7 @@
     <title>Mis Reservas</title>
     <link rel="stylesheet" href="./estilos/general.css">
     <link rel="stylesheet" href="./estilos/nav.css">
+    <link rel="stylesheet" href="./estilos/reservas.css">
 </head>
 <body>
 <header>

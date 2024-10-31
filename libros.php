@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./estilos/libros.css">
     <link rel="stylesheet" href="./estilos/general.css">
     <link rel="stylesheet" href="./estilos/nav.css">
+    <link rel="stylesheet" href="./estilos/footer.css">
     <title>Libros</title>
 </head>
 <body>
@@ -54,50 +55,23 @@
         <div class="libro historia">Historia</div>
     </div>
 
-    <div class="terrorlibro">
+    <div class="librosterror">
         <h2>Terror</h2>
-    <div class="card" style="max-width: 540px;">
+    <div class="card" >
         <div class="contenedorlibro">
             <div class="imagen">
                 <img src="./img/Dracula.webp" class="portadas">
             </div>
             <div class="col-md-8">
-            <div class="card-body">
-                <h3 class="card-title">Drácula</h3>
-                <p class="card-text">Novela gótica de terror que narra la historia del conde Drácula, un ser solitario y terrorífico que se traslada de Transilvania a Londres para conseguir sus fines.</p>
+            <div class="cuerpo">
+                <h3><b>Título: </b>Drácula</h3><br>
+                <h3><b>Autor: </b>Yo</h3><br>
+                <p class="card-text"><b>Descripción: </b>Novela gótica de terror que narra la historia del conde Drácula, un ser solitario y terrorífico que se traslada de Transilvania a Londres para conseguir sus fines.</p>
+                <button type="button" onclick="reservar()">Reservar</button>
             </div>
             </div>
         </div>
     </div> 
-    <div class="card" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-            <img src="./img/dentrodemi.webp" class="portadas">
-            </div>
-            <div class="col-md-8">
-            <div class="card-body">
-                <h3 class="card-title">Dentro de mí</h3>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            </div>
-        </div>
-       
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
 

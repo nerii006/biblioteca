@@ -1,0 +1,7 @@
+body{
+    background: url(../img/fondolibro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    row-gap: 1rem;
+}
