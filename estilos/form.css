@@ -1,5 +1,8 @@
 body{
-    background: radial-gradient(rgb(159, 203, 216), rgb(82, 124, 179));
+    /*background: radial-gradient(rgb(159, 203, 216), rgb(82, 124, 179));*/
+    background: url(./img/fondolibro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h1{

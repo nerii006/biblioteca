@@ -7,17 +7,13 @@
     <link rel="stylesheet" href="./estilos/general.css">
     <link rel="stylesheet" href="./estilos/nav.css">
     <link rel="stylesheet" href="./estilos/form.css">
-    <link rel="stylesheet" href="./estilos/libros.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <img id="logo" src="./img/logoenet.png" alt="">
             <a href="./libros.php">Libros</a>
-            <a href="#">Mis Reservas</a>
-            <a href="#">Libros</a>
-            <a href="#reservas.php">Mis Reservas</a>
-            <a href="#">Manual de Uso</a>
+            <a href="./reservas.php">Mis Reservas</a>
             <a href="#contacto">Contacto</a>                    
         </nav>
     </header>
