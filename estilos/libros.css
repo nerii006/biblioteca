@@ -76,3 +76,19 @@ body {
 .libro:not(.terror):not(.comedia):not(.historia):not(.ciencia-ficcion):not(.matematica):not(.lengua) {
     background-color: #c0c0c0;
 }
+
+.terrorlibro{
+    width: 700px;
+    height: 30%;
+    background-color: aliceblue;
+}
+
+.card {
+    border: solid gray;
+    margin: 10px;
+}
+.portadas{
+    margin-left: 20px;
+    height: 280px;
+    width: 200px;
+}
