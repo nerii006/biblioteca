@@ -14,7 +14,7 @@
         <nav class="navbar">
             <img id="logo" src="./img/logoenet.png" alt="">
             <a href="./reservas.php">Mis Reservas</a>
-            <a href="#">Manual de Uso</a>
+            <a href="./manuso.php">Manual de Uso</a>
             <a href="#contacto">Contacto</a>                    
         </nav>
     </header>
