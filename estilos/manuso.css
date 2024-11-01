@@ -1,11 +1,49 @@
 body{
-    background: url(./img.fondolibro.jpg);
+    background: url(../img/fondolibro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    row-gap: 1rem;
 }
 
-/* .titulo{
-    margin-top: 150px;
+.titulo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 60px;
 }
-.Preguntas{
-    margin-top: 150px;
+
+.card-title{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 60px;
+    
+} 
+
+.letra{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+
+}
+
+.container{
+    background-image: url(../img/AAFiuq2BQEA_1730463270411.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    height: 1000px;
+    
+} 
+
+/* .dividido1{
+   margin-left: 100px; 
+    display: flex;
+}
+
+.dividido2{
+    margin-left: 100px;
+    display: flex;
 } */
-
