@@ -10,14 +10,12 @@
     <title>Libros</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <img id="logo" src="./img/logoenet.png" alt="">
-            <a href="./reservas.php">Mis Reservas</a>
-            <a href="./manuso.php">Manual de Uso</a>
-            <a href="#contacto">Contacto</a>                    
-        </nav>
-    </header>
+<?php include('template/header.php') ?>
+
+
+<div class="todo">
+<div class="siseve">
+</div>
  <h1>Libros</h1>
     
     <div class="libreria">
@@ -71,10 +69,10 @@
             </div>
             </div>
         </div>
-    </div> 
-
     </div>
-
+    </div>    
+</div>
+    <?php include('template/footer.php') ?>
     <script src="./script.js"></script>
 </body>
 </html>

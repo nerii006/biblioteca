@@ -10,16 +10,9 @@
     <link rel="stylesheet" href="./estilos/footer.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <img id="logo" src="./img/logoenet.png" alt="">
-            <a href="./libros.php">Libros</a>
-            <a href="./reservas.php">Mis Reservas</a>
-            <a href="./manuso.php">Manual de uso</a>
-            <a href="#contacto">Contacto</a>                    
-        </nav>
-    </header>
-
+   <?php include('template/header.php') ?>
+<div class="siseve">
+</div>
     <div class="formcontenedor">
     <h1>¡Bienvenido a la página de la Biblioteca Escolar!</h1><br>
 
@@ -30,7 +23,7 @@
             <input type="text" id="nombre" placeholder="Nombre de Usuario" required>
             <br>
 
-            <label for="Nombre">DNI:</label>
+            <label for="DNI">DNI:</label>
             <input type="text" id="dni" placeholder="DNI" required>
             <br>
          
@@ -43,20 +36,7 @@
         </form> 
 
     </div>
-
-    <footer>
-            <div id="contacto" class="footer-content">
-                <h3>HAPPY HOUR</h3>
-                <p>El mejor lugar para disfrutar de comidas ríquisimas y pasar momentos inolvidables. ¡Te esperamos!</p>
-                <ul class="socials">
-                    <li><a href="https://www.facebook.com/?locale=es_LA"><img src="img/BiFacebook.svg" alt="Facebook"></a></li>
-                    <li><a href="#"><img src="img/WhhCallalt.svg" alt="Numero"></a>03385-406682</li>
-                    <li><a href="https://www.instagram.com/"><img src="img/BiInstagram.svg" alt="Instagram"></a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 HAPPY HOUR | Todos los derechos reservados.</p>
-            </div>
-        </footer>
+    
+    <?php include('./template/footer.php') ?>
 </body>
 </html>
