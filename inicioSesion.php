@@ -11,8 +11,8 @@
     <title>Biblioteca</title>
     <link rel="stylesheet" href="./estilos/general.css">
     <link rel="stylesheet" href="./estilos/nav.css">
-    <link rel="stylesheet" href="./estilos/form.css">
     <link rel="stylesheet" href="./estilos/footer.css">
+    <link rel="stylesheet" href="./estilos/form.css">
 
 </head>
 <?php
@@ -51,23 +51,22 @@
 <div class="siseve">
 </div>
     <div class="formcontenedor">
-    <h1>¡Bienvenido a la página de la Biblioteca Escolar!</h1><br>
-
-    
-        <form method="post" class="form">
-            <h2>Inicio de Sesión</h2> 
-            <label for="DNI">DNI:</label>
-            <input type="text" name="dni" id="dni" placeholder="DNI" required>
-            <br>
-         
-            <label for="Contraseña">Contraseña:</label>
-            <input type="password" name="password" id="password" placeholder="Contraseña" required>
-            <br>
-            <button type="submit">Iniciar sesión</button>
-            <br>
-            <h4>Si no tienes una cuenta haz <a href="index.php">Click aquí</a> para regiistrarse</h4>
-        </form> 
-
+            <h1>¡Bienvenido a la página de la Biblioteca Escolar!</h1><br>
+        
+            
+                <form method="post" class="form">
+                    <h2>Inicio de Sesión</h2> 
+                    <label for="DNI">DNI:</label>
+                    <input type="text" name="dni" id="dni" placeholder="DNI" required>
+                    <br>
+                 
+                    <label for="Contraseña">Contraseña:</label>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <br>
+                    <button type="submit">Iniciar sesión</button>
+                    <br>
+                    <h4>Si no tienes una cuenta haz <a href="index.php">Click aquí</a> para registrarse</h4>
+                </form> 
     </div>
     
     <?php include('./template/footer.php') ?>

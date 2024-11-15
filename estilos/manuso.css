@@ -6,44 +6,44 @@ body{
     row-gap: 1rem;
 }
 
-.titulo{
+h1{
+    color: aliceblue;
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
-.card-title{
+h2{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 60px;
-    
+    margin-top: 60px;  
 } 
 
-.letra{
+h5{
     align-items: center;
     justify-content: center;
     display: flex;
-
-
 }
 
 .container{
-    background-image: url(../img/AAFiuq2BQEA_1730463270411.png);
+    margin-top: 5%;
+    background-image: url(../img/utiles.png);
     background-size: cover;
     background-repeat: no-repeat;
-    align-items: center;
-    height: 1000px;
-    width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70%;
+    width: 75%;
+    margin-bottom: 20%;
 } 
 
-/* .dividido1{
-   margin-left: 100px; 
-    display: flex;
+.Preguntas{
+    display: flex;   
+    justify-content: center;
+    flex-direction: column;
+    border: solid black;
+    width: 50%;
 }
-
-.dividido2{
-    margin-left: 100px;
-    display: flex;
-} */

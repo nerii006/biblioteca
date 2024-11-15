@@ -6,6 +6,7 @@
     <title>Mis Reservas</title>
     <link rel="stylesheet" href="./estilos/general.css">
     <link rel="stylesheet" href="./estilos/nav.css">
+    <link rel="stylesheet" href="./estilos/footer.css">
     <link rel="stylesheet" href="./estilos/reservas.css">
 </head>
 <body>
@@ -15,28 +16,25 @@
 <div class="container">
     
      <h1>Tus Reservas📚</h1>
-        <div class="card">
-            <img src="" alt="Imagen 1">
-            <h3>Card 1</h3>
-            <p>Descripción de la tarjeta 1. Aquí puedes agregar detalles interesantes sobre el tema.</p>
-        </div>
-        <div class="card">
-            <img src="" alt="Imagen 2">
-            <h3>Card 2</h3>
-            <p>Descripción de la tarjeta 2. Aquí puedes agregar detalles interesantes sobre el tema.</p>
-        </div>
-        <div class="card">
-            <img src="" alt="Imagen 3">
-            <h3>Card 3</h3>
-            <p>Descripción de la tarjeta 3. Aquí puedes agregar detalles interesantes sobre el tema.</p>
-        </div>
-        <div class="card">
-            <img src="" alt="Imagen 4">
-            <h3>Card 4</h3>
-            <p>Descripción de la tarjeta 4. Aquí puedes agregar detalles interesantes sobre el tema.</p>
+    <div class="card">
+        <div class="contenedorlibro">
+            <div class="imagen">
+                <img src="./img/Dracula.webp" class="portadas">
+            </div>
+            <div class="col-md-8">
+            <div class="cuerpo">
+                <h3><b>Título: </b>Drácula</h3><br>
+                <h3><b>Autor: </b>Yo</h3><br>
+                <p class="card-text"><b>Descripción: </b>Novela gótica de terror que narra la historia del conde Drácula, un ser solitario y terrorífico que se traslada de Transilvania a Londres para conseguir sus fines.</p>
+                <button type="button" id="quitar" onclick="reservar()">Quitar</button>
+                <button type="button" onclick="reservar()">Reservar</button>
+            </div>
+            </div>
         </div>
     </div>
+</div>   
 
+<?php include('./template/footer.php') ?>
 
 </body>
 </html>

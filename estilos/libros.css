@@ -62,9 +62,30 @@ body {
     transform: rotate(-5deg);
 }
 
+.suspenso {
+    background-color: #325f3c;
+    transform: rotate(-2deg);
+}
+
+.romance {
+    background-color: #e62796;
+    transform: rotate(-5deg);
+}
+
+.biologia {
+    background-color: #1b038a;
+    transform: rotate(-3deg);
+}
+
+.thriller {
+    background-color: #5c1e47;
+    transform: rotate(-5deg);
+}
+
 .comedia {
     background-color: #ffd700;
     height: 120px;
+    transform: rotate(-3deg);
 }
 
 .historia {
@@ -87,8 +108,8 @@ body {
     height: 140px;
 }
 
-.libro:not(.terror):not(.comedia):not(.historia):not(.ciencia-ficcion):not(.matematica):not(.lengua) {
-    background-color: #c0c0c0;
+.libro:not(.terror):not(.comedia):not(.historia):not(.ciencia-ficcion):not(.matematica):not(.lengua):not(.thriller):not(.suspenso):not(.biologia):not(.romance) {
+    background-color: #bd7aa3;
 }
 
 .librosterror{

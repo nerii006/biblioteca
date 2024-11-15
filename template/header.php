@@ -4,6 +4,6 @@
             <a href="./libros.php">Libros</a>
             <a href="./reservas.php">Mis Reservas</a>
             <a href="./manuso.php">Manual de uso</a>
-            <a href="./registro.php">Registrarse</a>                    
+            <a href="./index.php">Registrarse</a>                    
         </nav>
 </header>

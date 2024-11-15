@@ -174,7 +174,7 @@ INSERT INTO `generos` (`id_genero`, `genero`) VALUES
 (7, 'Suspenso'),
 (8, 'Romance'),
 (9, 'Historia'),
-(10, 'BL');
+(10, 'Biología');
 
 -- --------------------------------------------------------
 

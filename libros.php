@@ -15,40 +15,40 @@
 <div class="todo">
 <div class="siseve">
 </div>
- <h1>Libros</h1>
+ <h1>Libros📖</h1>
     
     <div class="libreria">
-        <div class="libro terror">Terror</div>
-        <div class="libro comedia">Comedia</div>
-        <div class="libro historia">Historia</div>
-        <div class="libro ciencia-ficcion">Ciencia Ficción</div>
-        <div class="libro matematica">Matemática</div>
-        <div class="libro lengua">Lengua</div>
-        <div class="libro"></div>
-        <div class="libro terror">Terror</div>
-        <div class="libro historia">Historia</div>
-        <div class="libro ciencia-ficcion">Ciencia Ficción</div>
-
-        <div class="libro comedia">Comedia</div>
-        <div class="libro matematica">Matemática</div>
-        <div class="libro"></div>
-        <div class="libro lengua">Lengua</div>
-        <div class="libro terror">Terror</div>
-        <div class="libro"></div>
-        <div class="libro comedia">Comedia</div>
-        <div class="libro historia">Historia</div>
-        <div class="libro ciencia-ficcion">Ciencia Ficción</div>
-        <div class="libro matematica">Matemática</div>
-
-        <div class="libro lengua"></div>
-        <div class="libro terror">Terror</div>
-        <div class="libro comedia">Comedia</div>
+        <div class="libro terror"></div>
+        <div class="libro biologia">Biología</div>
         <div class="libro historia"></div>
         <div class="libro ciencia-ficcion"></div>
         <div class="libro matematica"></div>
+        <div class="libro lengua">Lengua</div>
+        <div class="libro"></div>
+        <div class="libro romance">Romance</div>
+        <div class="libro historia"></div>
+        <div class="libro ciencia-ficcion"></div>
+
+        <div class="libro comedia"></div>
+        <div class="libro matematica">Matemática</div>
+        <div class="libro lengua"></div>
+        <div class="libro biologia"></div>
+        <div class="libro terror"></div>
+        <div class="libro"></div>
+        <div class="libro comedia">Comedia</div>
+        <div class="libro historia"></div>
+        <div class="libro ciencia-ficcion">Ciencia Ficción</div>
+        <div class="libro matematica"></div>
+
+        <div class="libro lengua"></div>
+        <div class="libro terror">Terror</div>
+        <div class="libro"></div>
+        <div class="libro suspenso">Suspenso</div>
+        <div class="libro ciencia-ficcion"></div>
+        <div class="libro thriller">Thriller</div>
         <div class="libro lengua"></div>
         <div class="libro"></div>
-        <div class="libro ciencia-ficcion"></div>
+        <div class="libro comedia"></div>
         <div class="libro historia">Historia</div>
     </div>
 

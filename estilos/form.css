@@ -1,3 +1,6 @@
+body, html {
+    height: 100%;
+}
 body{
     /*background: radial-gradient(rgb(159, 203, 216), rgb(82, 124, 179));*/
     background: url(../img/fondolibro.jpg);
@@ -20,19 +23,19 @@ body{
 }
 
 h1{
-    margin-top: -70px;
+  
     color:rgb(255, 255, 255)
 }
 .formcontenedor {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
     top: 180px;
     align-items: center;
-    width: 100%;
+    width: 800px;
     height: 100%;
 }
+
 
 .form {
     width: 600px;
