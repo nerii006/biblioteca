@@ -11,64 +11,186 @@
 </head>
 <body>
 <?php include('template/header.php') ?>
+<?php include('conexion.php') ?>
+<?php
+$accion = (isset($_POST['accion'])) ? $_POST['accion'] : "";
+switch ($accion) {
+    case "terror":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=1");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 1;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "lengua":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=2");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 2;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "matematicas":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=3");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 3;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "ciencia-ficcion":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=4");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 4;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "comedia":
+    $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=5");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 5;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "thriller":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=6");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 6;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "suspenso":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=7");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 7;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "romance":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=8");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 8;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "historia":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=9");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 9;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+    case "novela":
+        $query = $conexion->prepare("SELECT * FROM libros WHERE genero_id=10");
+        $query->execute();
+        $librosTerror = $query->fetchAll(PDO::FETCH_ASSOC);
+        $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE genero_id = 10;");
+        $query->execute();
+        $libro = $query->fetch(PDO::FETCH_LAZY);
+        break;
+}
+
+?>
 
 <div class="todo">
 <div class="siseve">
 </div>
  <h1>Libros📖</h1>
-    
-    <div class="libreria">
+    <form method="POST" class="libreria">
         <div class="libro terror"></div>
-        <div class="libro biologia">Biología</div>
-        <div class="libro historia"></div>
-        <div class="libro ciencia-ficcion"></div>
-        <div class="libro matematica"></div>
-        <div class="libro lengua">Lengua</div>
-        <div class="libro"></div>
-        <div class="libro romance">Romance</div>
-        <div class="libro historia"></div>
-        <div class="libro ciencia-ficcion"></div>
-
-        <div class="libro comedia"></div>
-        <div class="libro matematica">Matemática</div>
-        <div class="libro lengua"></div>
         <div class="libro biologia"></div>
-        <div class="libro terror"></div>
-        <div class="libro"></div>
-        <div class="libro comedia">Comedia</div>
         <div class="libro historia"></div>
-        <div class="libro ciencia-ficcion">Ciencia Ficción</div>
-        <div class="libro matematica"></div>
-
-        <div class="libro lengua"></div>
-        <div class="libro terror">Terror</div>
-        <div class="libro"></div>
-        <div class="libro suspenso">Suspenso</div>
         <div class="libro ciencia-ficcion"></div>
-        <div class="libro thriller">Thriller</div>
+        <div class="libro matematica"></div>
+        <div class="libro lengua"></div>
+        <div class="libro"></div>
+        <div class="libro romance"></div>
+        <div class="libro historia"></div>
+        <div class="libro ciencia-ficcion"></div>
+        <div class="libro historia"></div>
+        <div class="libro ciencia-ficcion"></div>
+        <div class="libro matematica"></div>
+        
+        <button class="libro agarrable terror" name="accion" value="terror" type="submit">
+            <div class="terror" id="terror">Terror</div>
+        </button>
+        <button class="libro agarrable comedia" name="accion" value="comedia" type="submit">
+            <div class="comedia" id="comedia">Comedia</div>
+        </button>
+        <button class="libro agarrable thriller" name="accion" value="thriller" type="submit">
+            <div class="thriller" id="thriller">Thriller</div>
+        </button>
+        <button class="libro agarrable ciencia-ficcion" name="accion" value="ciencia-ficcion" type="submit">
+            <div class="ciencia-ficcion" id="ciencia-ficcion">Ciencia Ficción</div>
+        </button>
+        <button class="libro agarrable suspenso" name="accion" value="suspenso" type="submit">
+            <div class="suspenso" id="suspenso">Suspenso</div>
+        </button>
+        <button class="libro agarrable romance" name="accion" value="romance" type="submit">
+            <div class="romance" id="romance">Romance</div>
+        </button>
+        <button class="libro agarrable novela" name="accion" value="novela" type="submit">
+            <div class="novela" id="novela">Novela</div>
+        </button>
+        
+        <button class="libro agarrable lengua" name="accion" value="lengua" type="submit">
+            <div class="lengua" id="lengua">Lengua</div>
+        </button>
+        <button class="libro agarrable matematicas" name="accion" value="matematicas" type="submit">
+            <div class="matematicas" id="matematicas">Matemáticas</div>
+        </button>
+        <button class="libro agarrable historia" name="accion" value="historia" type="submit">
+            <div class="historia" id="historia">Historia</div>
+        </button>
+        <div class="libro suspenso"></div>
+        <div class="libro ciencia-ficcion"></div>
+        <div class="libro thriller"></div>
         <div class="libro lengua"></div>
         <div class="libro"></div>
         <div class="libro comedia"></div>
-        <div class="libro historia">Historia</div>
-    </div>
+        <div class="libro historia"></div>
+    </form>
 
     <div class="librosterror">
-        <h2>Terror</h2>
-    <div class="card" >
-        <div class="contenedorlibro">
-            <div class="imagen">
-                <img src="./img/Dracula.webp" class="portadas">
-            </div>
-            <div class="col-md-8">
-            <div class="cuerpo">
-                <h3><b>Título: </b>Drácula</h3><br>
-                <h3><b>Autor: </b>Yo</h3><br>
-                <p class="card-text"><b>Descripción: </b>Novela gótica de terror que narra la historia del conde Drácula, un ser solitario y terrorífico que se traslada de Transilvania a Londres para conseguir sus fines.</p>
-                <button type="button" onclick="reservar()">Reservar</button>
-            </div>
+        <h2>   
+        <?php 
+            
+                echo $libro['genero'];
+            
+        ?> 
+        </h2>
+        
+        <?php 
+        if (!empty($librosTerror)) {
+        foreach ($librosTerror as $libro) { 
+            $query = $conexion->prepare("SELECT * FROM autores INNER JOIN libros ON libros.autor_id = autores.id_autor WHERE libros.id_libro = :id");
+            $query->bindParam(':id', $libro['id_libro']);
+            $query->execute();
+            $autor = $query->fetch(PDO::FETCH_LAZY);
+        ?>
+        <div class="card">
+            <div class="contenedorlibro">
+                <div class="imagen">
+                    <img src="./img/Dracula.webp" class="portadas">
+                </div>
+                <div class="col-md-8">
+                    <div class="cuerpo">
+                        <h3><b>Título: </b><?php echo $libro['nombre_libro']; ?></h3><br>
+                        <h3><b>Autor: </b><?php echo $autor['nombre_autor']; ?></h3><br>
+                        <p class="card-text"><b>Descripción: </b><?php echo $libro['desc_libro']; ?></p>
+                        <button type="button" onclick="reservar()">Reservar</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <?php }} ?>
     </div>    
 </div>
     <?php include('template/footer.php') ?>

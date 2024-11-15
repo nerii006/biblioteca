@@ -40,18 +40,27 @@ body {
 }
 
 .libro {
+    border:none;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;              
     height: 150px; 
     color: #fff;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 14px;
     text-align: center;
     border-radius: 4px;
     writing-mode: vertical-rl; 
     text-orientation:sideways; 
+    margin: 0;
+}
+.agarrable {
+    cursor: grab;
+}
+.agarrable:active {
+    cursor: grabbing;
 }
 
 .libro:hover{
