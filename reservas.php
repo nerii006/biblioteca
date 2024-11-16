@@ -12,7 +12,7 @@
 <body>
 <?php include('template/header.php') ?>
     
-<div class="siseve"></div>
+<div class="siseve">
 <div class="container">
     
      <h1>Tus Reservas📚</h1>
@@ -32,7 +32,8 @@
             </div>
         </div>
     </div>
-</div>   
+</div>  
+</div> 
 
 <?php include('./template/footer.php') ?>
 

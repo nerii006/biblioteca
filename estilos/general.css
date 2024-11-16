@@ -2,17 +2,14 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body {
-    height: 100%;
-}
-
 .siseve{
-    z-index: -1;
+    min-height: calc(100vh - 15px);
+    width: 800px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-
-    width: 70%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.404);
-    position: absolute;
+    position: relative;
+    top: 30px;
 }

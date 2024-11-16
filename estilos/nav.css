@@ -10,7 +10,6 @@ body{
     min-height: 100vh;
 }
 
-
 header{
     background-color: #dcdaf5;
     width: 100%;
@@ -27,14 +26,29 @@ header{
 .navbar{
     display: flex; 
     align-items: center; 
-    justify-content: end;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     /* margin: 0 auto;  */
-    z-index: 1;     
+    z-index: 1; 
+    padding: 0 1rem;    
 }
 
-.navbar a {
+.navbar .nombreUsuario {
+    color: rgb(99, 127, 167);
+    font-weight: 600;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.navbar .opciones {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .opciones a {
     color: rgb(145, 170, 206);
     text-decoration: none;
     font-size: 17px;
@@ -43,7 +57,7 @@ header{
     transition: background-color 0.3s;
 }
 
-.navbar a:hover {
+.navbar .opciones a:hover {
     color: #5d7ce2;
     font-weight: bolder;
     font-size: 18px;

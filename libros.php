@@ -13,6 +13,10 @@
 <?php include('template/header.php') ?>
 <?php include('conexion.php') ?>
 <?php
+/* session_start();
+if (isset($_SESSION['usuario'])) {
+    echo $_SESSION['usuario'];
+} */
 $accion = (isset($_POST['accion'])) ? $_POST['accion'] : "";
 switch ($accion) {
     case "terror":
@@ -99,10 +103,9 @@ switch ($accion) {
 
 ?>
 
-<div class="todo">
 <div class="siseve">
-</div>
- <h1>Libros📖</h1>
+    <div class="formContenedor">
+    <h1>Libros📖</h1>
     <form method="POST" class="libreria">
         <div class="libro terror"></div>
         <div class="libro biologia"></div>
@@ -157,13 +160,12 @@ switch ($accion) {
         <div class="libro comedia"></div>
         <div class="libro historia"></div>
     </form>
-
-    <div class="librosterror">
+    <div class="listaLibros">
         <h2>   
         <?php 
-            
-                echo $libro['genero'];
-            
+        if (isset($libro)) {
+            echo $libro['genero'];   
+        }
         ?> 
         </h2>
         
@@ -191,9 +193,15 @@ switch ($accion) {
             </div>
         </div>
         <?php }} ?>
-    </div>    
-</div>
-    <?php include('template/footer.php') ?>
+    </div> 
+    </div>
+
+ 
+
+     
+</div>  
+
+   <?php include('./template/footer.php') ?>
     <script src="./script.js"></script>
 </body>
 </html>
