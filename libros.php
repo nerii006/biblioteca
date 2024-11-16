@@ -107,53 +107,60 @@ switch ($accion) {
     <div class="formContenedor">
     <h1>Libros📖</h1>
     <form method="POST" class="libreria">
-        <div class="libro terror"></div>
+        <button class="libro agarrable terror" name="accion" value="terror" type="submit">
+            <div class="terror" id="terror">Terror</div>
+        </button>
+        <button class="libro agarrable thriller" name="accion" value="thriller" type="submit">
+            <div class="thriller" id="thriller">Thriller</div>
+        </button>
+        <button class="libro agarrable suspenso" name="accion" value="suspenso" type="submit">
+            <div class="suspenso" id="suspenso">Suspenso</div>
+        </button>
         <div class="libro biologia"></div>
         <div class="libro historia"></div>
         <div class="libro ciencia-ficcion"></div>
         <div class="libro matematica"></div>
         <div class="libro lengua"></div>
         <div class="libro"></div>
-        <div class="libro romance"></div>
+        <div class="libro comedia"></div>
         <div class="libro historia"></div>
         <div class="libro ciencia-ficcion"></div>
-        <div class="libro historia"></div>
+        <div class="libro romance"></div>
         <div class="libro ciencia-ficcion"></div>
         <div class="libro matematica"></div>
+        <div class="libro suspenso"></div>
         
-        <button class="libro agarrable terror" name="accion" value="terror" type="submit">
-            <div class="terror" id="terror">Terror</div>
-        </button>
+
         <button class="libro agarrable comedia" name="accion" value="comedia" type="submit">
             <div class="comedia" id="comedia">Comedia</div>
         </button>
-        <button class="libro agarrable thriller" name="accion" value="thriller" type="submit">
-            <div class="thriller" id="thriller">Thriller</div>
-        </button>
+
         <button class="libro agarrable ciencia-ficcion" name="accion" value="ciencia-ficcion" type="submit">
             <div class="ciencia-ficcion" id="ciencia-ficcion">Ciencia Ficción</div>
         </button>
-        <button class="libro agarrable suspenso" name="accion" value="suspenso" type="submit">
-            <div class="suspenso" id="suspenso">Suspenso</div>
-        </button>
+
         <button class="libro agarrable romance" name="accion" value="romance" type="submit">
             <div class="romance" id="romance">Romance</div>
         </button>
+
         <button class="libro agarrable novela" name="accion" value="novela" type="submit">
-            <div class="novela" id="novela">Novela</div>
+            <div class="novela" id="novela"><a href="#listaLibros">Novela</a></div>
         </button>
         
+
         <button class="libro agarrable lengua" name="accion" value="lengua" type="submit">
             <div class="lengua" id="lengua">Lengua</div>
         </button>
+
         <button class="libro agarrable matematicas" name="accion" value="matematicas" type="submit">
             <div class="matematicas" id="matematicas">Matemáticas</div>
         </button>
+
         <button class="libro agarrable historia" name="accion" value="historia" type="submit">
             <div class="historia" id="historia">Historia</div>
         </button>
         <div class="libro suspenso"></div>
-        <div class="libro ciencia-ficcion"></div>
+        <div class="libro terror"></div>
         <div class="libro thriller"></div>
         <div class="libro lengua"></div>
         <div class="libro"></div>

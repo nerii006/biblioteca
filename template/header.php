@@ -15,8 +15,8 @@
             <a href="./reservas.php">Mis Reservas</a>
             <a href="./manuso.php">Manual de uso</a>
             <?php if (!isset($_SESSION['usuario'])) { ?>
-                <a href="../bibliotecaPomazan/inicioSesion.php">Iniciar sesión</a>
-                <a href="../bibliotecaPomazan/index.php">Registrarse</a>
+                <a href="inicioSesion.php">Iniciar sesión</a>
+                <a href="index.php">Registrarse</a>
               <?php } if (isset($_SESSION['usuario'])) {?>
                 <a href="cerrarSesion.php">Cerrar sesión</a>
               <?php } ?>

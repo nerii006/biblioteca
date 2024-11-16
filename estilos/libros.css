@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: url(../img/fondolibro.jpg);
     background-size: cover;
@@ -148,7 +152,7 @@ h1{
 }
 
 .libro:not(.terror):not(.comedia):not(.historia):not(.ciencia-ficcion):not(.matematica):not(.lengua):not(.thriller):not(.suspenso):not(.biologia):not(.romance) {
-    background-color: #bd7aa3;
+    background-color: #a3658b;
 }
 
 h2{
