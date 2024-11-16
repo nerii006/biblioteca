@@ -144,7 +144,7 @@ switch ($accion) {
         </button>
 
         <button class="libro agarrable novela" name="accion" value="novela" type="submit">
-            <div class="novela" id="novela"><a href="#listaLibros">Novela</a></div>
+            <div class="novela" id="novela">Novela</div>
         </button>
         
 
@@ -167,7 +167,7 @@ switch ($accion) {
         <div class="libro comedia"></div>
         <div class="libro historia"></div>
     </form>
-    <div class="listaLibros">
+    <div class="listaLibros" id="listaLibros">
         <h2>   
         <?php 
         if (isset($libro)) {
