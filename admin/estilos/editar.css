@@ -1,0 +1,91 @@
+body {
+    background-image: url(.../img/fondolibro.jpg);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.contenedor {
+    background-color: rgba(240, 248, 255, 0.527);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group .save-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-group .delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.button-group .add-btn {
+    background-color: #007BFF;
+    color: white;
+}
+
+#results {
+    justify-content: center;
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    display: none;
+}
