@@ -14,7 +14,7 @@
 <?php include('template/header.php') ?>
   
 <div class="siseve">
-</div>
+
 
   <div class="container">
         <h1>Manual de uso✅</h1>
@@ -37,7 +37,7 @@
 
     </div>
   </div>
-
+</div>
   
 <?php include('template/footer.php') ?>
 </body>

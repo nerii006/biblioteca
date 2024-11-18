@@ -18,7 +18,7 @@ h2{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 60px;  
+    margin-top: 60px;
 } 
 
 h5{
@@ -28,15 +28,15 @@ h5{
 }
 
 .container{
-    margin-top: 5%;
+    margin-top: 5%; 
     background-image: url(../img/utiles.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 70%;
-    width: 75%;
+    height: 140%;
+    width: 100%;
     margin-bottom: 20%;
 } 
 
@@ -45,5 +45,9 @@ h5{
     justify-content: center;
     flex-direction: column;
     border: solid black;
-    width: 50%;
-}
+    height: 30%;
+    width: 58%;
+    margin-left: 25%;
+}   
+
+
