@@ -15,25 +15,25 @@
   
 <div class="siseve">
 
-
+<h1>Manual de uso✅</h1>
   <div class="container">
-        <h1>Manual de uso✅</h1>
+   
     <div class="Preguntas">
          <h2>¿Qué debo hacer para retirar un libro?</h2>
-         <h5>Primero debes registrarte, sino posee cuenta</h5>
+         <h5>Primero se tiene que registrar, eso sino posee cuenta.Si tiene cuenta lo puede retirar tranquilamente.</h5>
 
          <h2>¿Cómo hago para encargar un libro?</h2>
-         <h5>Precionas la tecla reservar y eso seria todo ya que se guarda con tu nombre.</h5>
+         <h5>Precione la técla reservar y eso seria todo ya que se guarda con tu nombre.</h5>
 
-         <h2>¿Qué generos estran dispuestos en la biblioteca?</h2>
-         <h5>Los libros que esan disponibless son: matemáticas, historia, cinecia ficción, terror, lengua,etc. </h5>
+         <h2>¿Qué géneros están disponibles en la biblioteca?</h2>
+         <h5>Los libros que están disponibles son: matemáticas, historia, cinecia ficción, terror, lengua,etc. </h5>
 
          <h2>¿Cómo puedo solicitar un libro que no está disponible?</h2>
-         <h5>Lo podes solitar reservando el libro para cuando se desocupe lo puedas sacar.</h5>
+         <h5>Lo podes solitar reservando el libro para cuando se desocupe lo puedas retirar.</h5>
          
-         <h2>¿Cuáles son las políticas de prestamo y devolución?</h2>
+         <h2>¿Cuáles son las políticas de préstamo y devolución?</h2>
          <h5>En caso de que el libro se devuelva en mal estado por ej: roto, rayado, entre otros.<br>
-         Se le aplicara un actá del colegio y además debera pagar los daños.</h5>
+         Se le dictará un actá del colegio y además debera pagar los daños ocasionados.</h5>
 
     </div>
   </div>

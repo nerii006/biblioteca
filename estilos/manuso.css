@@ -11,43 +11,51 @@ h1{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 h2{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 60px;
+    margin-top: 40px;
+    
 } 
 
 h5{
     align-items: center;
     justify-content: center;
     display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.siseve {
+    width: 60%;
 }
 
 .container{
-    margin-top: 5%; 
     background-image: url(../img/utiles.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 140%;
     width: 100%;
-    margin-bottom: 20%;
+    height: calc(100vh - 50px);
+    align-items: center;
+    position: relative;
 } 
 
 .Preguntas{
     display: flex;   
     justify-content: center;
     flex-direction: column;
-    border: solid black;
     height: 30%;
-    width: 58%;
-    margin-left: 25%;
+    width: 40%;
+    position: relative;
+    top: 5rem;
+   
 }   
 
 
