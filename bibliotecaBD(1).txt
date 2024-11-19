@@ -1,0 +1,427 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-11-2024 a las 18:17:50
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `biblioteca`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `administradores`
+--
+
+CREATE TABLE `administradores` (
+  `id_admin` int(11) NOT NULL,
+  `nombre_admin` varchar(25) NOT NULL,
+  `contrasena_admin` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `administradores`
+--
+
+INSERT INTO `administradores` (`id_admin`, `nombre_admin`, `contrasena_admin`) VALUES
+(1, 'admin', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alumnos`
+--
+
+CREATE TABLE `alumnos` (
+  `id_alumno` int(11) NOT NULL,
+  `nombre_alumno` varchar(100) NOT NULL,
+  `dni_alumno` varchar(8) NOT NULL,
+  `contrasena_alumno` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `alumnos`
+--
+
+INSERT INTO `alumnos` (`id_alumno`, `nombre_alumno`, `dni_alumno`, `contrasena_alumno`) VALUES
+(1, 'Nerina Geraldine Bosco', '46768629', 'nerina123'),
+(2, 'Martina Ayelén Barnard', '46768630', 'martina123'),
+(3, 'Teo Green', '46768631', 'teo123'),
+(4, 'Lucia Fernandez', '46768632', 'lucia123'),
+(5, 'Jose Martinez', '46768633', 'jose123'),
+(6, 'Laura Sanchez', '46768634', 'laura123'),
+(7, 'Diego Lopez', '46768635', 'diego123'),
+(8, 'Ana Ramirez', '46768636', 'ana123'),
+(9, 'Pablo Garcia', '46768637', 'pablo123'),
+(10, 'Marta Herrera', '46768638', 'marta123'),
+(11, 'martinita', '46768649', '123'),
+(12, 'Santinito', '46768610', 'grincito123');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `autores`
+--
+
+CREATE TABLE `autores` (
+  `id_autor` int(11) NOT NULL,
+  `nombre_autor` varchar(50) NOT NULL,
+  `nacion_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `autores`
+--
+
+INSERT INTO `autores` (`id_autor`, `nombre_autor`, `nacion_id`) VALUES
+(1, 'Jorge Luis Borges', 1),
+(2, 'Julio Cortázar', 1),
+(3, 'Victor Hugo', 2),
+(4, 'Gustave Flaubert', 2),
+(5, 'Ernest Hemingway', 3),
+(6, 'Mark Twain', 3),
+(7, 'Paulo Coelho', 4),
+(8, 'Jorge Amado', 4),
+(9, 'Octavio Paz', 5),
+(10, 'Carlos Fuentes', 5),
+(11, 'Miguel de Cervantes', 6),
+(12, 'Federico García Lorca', 6),
+(13, 'Dante Alighieri', 7),
+(14, 'Italo Calvino', 7),
+(15, 'Johann Wolfgang von Goethe', 8),
+(16, 'Hermann Hesse', 8),
+(17, 'William Shakespeare', 9),
+(18, 'Virginia Woolf', 9),
+(19, 'Margaret Atwood', 10),
+(20, 'Alice Munro', 10),
+(21, 'Gabriel García Márquez', 5),
+(22, 'Mario Vargas Llosa', 18),
+(23, 'J.K. Rowling', 9),
+(24, 'George Orwell', 9),
+(25, 'Charles Dickens', 2),
+(26, 'Franz Kafka', 8),
+(27, 'Margaret Atwood', 10),
+(28, 'Toni Morrison', 9),
+(29, 'Haruki Murakami', 12),
+(30, 'Stephen King', 9),
+(31, 'Neil Gaiman', 9),
+(32, 'Isabel Allende', 19),
+(33, 'Juan Rulfo', 18),
+(34, 'E.L. James', 9),
+(35, 'John Green', 9),
+(36, 'C.S. Lewis', 9),
+(37, 'J.R.R. Tolkien', 9),
+(38, 'Isaac Asimov', 8),
+(39, 'Philip K. Dick', 8),
+(40, 'Hans Magnus Enzensberger', 8),
+(41, 'Bertrand Russell', 9),
+(42, 'Daniel Goleman', 3),
+(43, 'Manuel Rivas', 6),
+(44, 'Paula Hawkins', 9),
+(45, 'Dan Brown', 3),
+(46, 'Thomas Harris', 3),
+(47, 'Santiago Lorenzo', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estados`
+--
+
+CREATE TABLE `estados` (
+  `id_estado` int(11) NOT NULL,
+  `estado` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `estados`
+--
+
+INSERT INTO `estados` (`id_estado`, `estado`) VALUES
+(1, 'Disponible'),
+(2, 'Reservado'),
+(3, 'Tomado'),
+(4, 'No disponible');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `generos`
+--
+
+CREATE TABLE `generos` (
+  `id_genero` int(11) NOT NULL,
+  `genero` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `generos`
+--
+
+INSERT INTO `generos` (`id_genero`, `genero`) VALUES
+(1, 'Terror'),
+(2, 'Lengua'),
+(3, 'Matemáticas'),
+(4, 'Ciencia ficción'),
+(5, 'Comedia'),
+(6, 'Thriller'),
+(7, 'Suspenso'),
+(8, 'Romance'),
+(9, 'Historia'),
+(10, 'Novela');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `libros`
+--
+
+CREATE TABLE `libros` (
+  `id_libro` int(11) NOT NULL,
+  `nombre_libro` varchar(100) NOT NULL,
+  `desc_libro` varchar(500) NOT NULL,
+  `autor_id` int(11) NOT NULL,
+  `estado_id` int(11) NOT NULL,
+  `genero_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `libros`
+--
+
+INSERT INTO `libros` (`id_libro`, `nombre_libro`, `desc_libro`, `autor_id`, `estado_id`, `genero_id`) VALUES
+(1, 'Ficciones', 'Una colección de cuentos fantásticos que exploran conceptos filosóficos.', 1, 1, 4),
+(2, 'Rayuela', 'Una novela experimental que permite múltiples lecturas.', 2, 1, 4),
+(3, 'Los Miserables', 'Novela sobre justicia, redención y la vida en la Francia del siglo XIX.', 3, 1, 10),
+(4, 'Madame Bovary', 'Historia de una mujer insatisfecha con su vida rural en Francia.', 4, 1, 10),
+(5, 'El viejo y el mar', 'La lucha de un viejo pescador con un pez gigante en el mar de Cuba.', 5, 1, 10),
+(6, 'Las aventuras de Tom Sawyer', 'Relato sobre la vida y travesuras de un niño en el sur de EE.UU.', 6, 1, 4),
+(7, 'El Alquimista', 'Una novela sobre la búsqueda personal y la realización de sueños.', 7, 1, 10),
+(8, 'Capitanes de la arena', 'Historia de un grupo de niños abandonados en Salvador de Bahía.', 8, 1, 10),
+(9, 'El laberinto de la soledad', 'Reflexión sobre la identidad mexicana y el ser mexicano.', 9, 1, 9),
+(10, 'Don Quijote de la Mancha', 'Novela sobre un hidalgo que sueña con revivir la caballería.', 11, 1, 10),
+(11, 'Cien años de soledad', 'Una obra maestra del realismo mágico que explora las tragedias de la familia Buendía.', 21, 1, 10),
+(12, 'La ciudad y los perros', 'Un relato sobre la vida en un colegio militar en Lima.', 22, 1, 10),
+(13, 'Harry Potter y la piedra filosofal', 'La primera parte de la saga de un joven mago que asiste a la escuela Hogwarts.', 23, 1, 4),
+(14, '1984', 'Una novela distópica sobre un futuro totalitario controlado por el Partido.', 24, 1, 4),
+(15, 'Oliver Twist', 'Historia de un huérfano en Londres que lucha por encontrar su lugar en la vida.', 25, 1, 10),
+(16, 'La metamorfosis', 'Un hombre se despierta transformado en un insecto gigante y debe enfrentarse a su nueva realidad.', 26, 1, 10),
+(17, 'El cuento de la criada', 'Una novela distópica en la que las mujeres son subyugadas en un régimen totalitario.', 27, 1, 10),
+(18, 'Beloved', 'La historia de una mujer exesclava que lucha con su pasado y la presencia de un espíritu en su hogar.', 28, 1, 10),
+(19, 'Norwegian Wood', 'Una historia de amor y pérdida en el Tokio de los años 60.', 29, 1, 10),
+(20, 'It', 'Un grupo de niños se enfrenta a una entidad maligna que toma la forma de un payaso.', 30, 1, 1),
+(21, 'American Gods', 'Un hombre se encuentra con antiguos dioses que luchan por la supremacía en un mundo moderno.', 31, 1, 4),
+(22, 'La casa de los espíritus', 'Una novela que mezcla realismo mágico y política en Chile.', 32, 1, 10),
+(23, 'Pedro Páramo', 'La historia de un joven que busca a su padre en un pueblo fantasma.', 33, 1, 10),
+(24, '50 sombras de Grey', 'Una historia de amor y poder en el mundo de los negocios.', 34, 1, 8),
+(25, 'Bajo la misma estrella', 'Una historia de amor entre dos jóvenes que luchan contra el cáncer.', 35, 1, 8),
+(26, 'Las crónicas de Narnia', 'Una serie de libros sobre un mundo fantástico y las aventuras de unos niños que lo descubren.', 36, 1, 4),
+(27, 'El hobbit', 'Un relato de aventuras en la Tierra Media donde un hobbit se enfrenta a dragones y enemigos.', 37, 1, 4),
+(28, 'Fundación', 'Una serie de libros de ciencia ficción que trata sobre el futuro de la humanidad y su supervivencia.', 38, 1, 4),
+(29, 'Ubik', 'En un futuro distópico, un grupo de personas lucha por mantenerse con vida tras un evento extraño.', 39, 1, 4),
+(30, 'El hombre en el castillo', 'Una novela que imagina un mundo donde los Aliados perdieron la Segunda Guerra Mundial.', 39, 1, 4),
+(31, 'El diablo de los números', 'Un niño descubre el fascinante mundo de las matemáticas en sus sueños.', 40, 1, 3),
+(32, 'El lenguaje de las emociones', 'Análisis del impacto del lenguaje en nuestras emociones.', 42, 1, 2),
+(33, 'La matemática como una de las bellas artes', 'Explora la matemática como arte creativo y fuente de belleza.', 41, 1, 3),
+(34, 'La lengua de las mariposas', 'Historia conmovedora sobre la enseñanza, la lengua y la libertad.', 43, 1, 2),
+(35, 'La chica del tren', 'Una testigo accidental se ve envuelta en un misterio peligroso.', 44, 1, 7),
+(36, 'El código Da Vinci', 'Misterio, religión y conspiraciones en una carrera contrarreloj.', 45, 1, 6),
+(37, 'El silencio de los inocentes', 'Un agente del FBI busca capturar a un peligroso asesino en serie.', 46, 1, 6),
+(38, 'Los asquerosos', 'Sátira sobre la vida moderna y la soledad elegida.', 47, 1, 5),
+(39, 'Buenos presagios', 'Un ángel y un demonio unen fuerzas para evitar el Apocalipsis.', 31, 1, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `nacionalidad`
+--
+
+CREATE TABLE `nacionalidad` (
+  `id_nacion` int(11) NOT NULL,
+  `nacion` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `nacionalidad`
+--
+
+INSERT INTO `nacionalidad` (`id_nacion`, `nacion`) VALUES
+(1, 'Argentina'),
+(2, 'Francia'),
+(3, 'Estados Unidos'),
+(4, 'Brasil'),
+(5, 'México'),
+(6, 'España'),
+(7, 'Italia'),
+(8, 'Alemania'),
+(9, 'Reino Unido'),
+(10, 'Canadá'),
+(11, 'Australia'),
+(12, 'Japón'),
+(13, 'China'),
+(14, 'India'),
+(15, 'Rusia'),
+(16, 'Sudáfrica'),
+(17, 'Colombia'),
+(18, 'Perú'),
+(19, 'Chile'),
+(20, 'Uruguay');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `reservas`
+--
+
+CREATE TABLE `reservas` (
+  `id_reserva` int(11) NOT NULL,
+  `alumno_id` int(11) NOT NULL,
+  `libro_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tomados`
+--
+
+CREATE TABLE `tomados` (
+  `id_tomado` int(11) NOT NULL,
+  `alumno_id` int(11) NOT NULL,
+  `libro_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indices de la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  ADD PRIMARY KEY (`id_alumno`);
+
+--
+-- Indices de la tabla `autores`
+--
+ALTER TABLE `autores`
+  ADD PRIMARY KEY (`id_autor`);
+
+--
+-- Indices de la tabla `estados`
+--
+ALTER TABLE `estados`
+  ADD PRIMARY KEY (`id_estado`);
+
+--
+-- Indices de la tabla `generos`
+--
+ALTER TABLE `generos`
+  ADD PRIMARY KEY (`id_genero`);
+
+--
+-- Indices de la tabla `libros`
+--
+ALTER TABLE `libros`
+  ADD PRIMARY KEY (`id_libro`);
+
+--
+-- Indices de la tabla `nacionalidad`
+--
+ALTER TABLE `nacionalidad`
+  ADD PRIMARY KEY (`id_nacion`);
+
+--
+-- Indices de la tabla `reservas`
+--
+ALTER TABLE `reservas`
+  ADD PRIMARY KEY (`id_reserva`);
+
+--
+-- Indices de la tabla `tomados`
+--
+ALTER TABLE `tomados`
+  ADD PRIMARY KEY (`id_tomado`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  MODIFY `id_alumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `autores`
+--
+ALTER TABLE `autores`
+  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- AUTO_INCREMENT de la tabla `estados`
+--
+ALTER TABLE `estados`
+  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `generos`
+--
+ALTER TABLE `generos`
+  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `libros`
+--
+ALTER TABLE `libros`
+  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT de la tabla `nacionalidad`
+--
+ALTER TABLE `nacionalidad`
+  MODIFY `id_nacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT de la tabla `reservas`
+--
+ALTER TABLE `reservas`
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tomados`
+--
+ALTER TABLE `tomados`
+  MODIFY `id_tomado` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

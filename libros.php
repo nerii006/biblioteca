@@ -108,8 +108,10 @@ switch ($accion) {
     <h1>Libros📖</h1>
     <form method="POST" class="libreria">
         <button class="libro agarrable terror" name="accion" value="terror" type="submit">
-            <div class="terror" id="terror">Terror</div>
-        </button>
+            <a href="#listaLibros">
+                <div class="terror" id="terror">Terror</div>
+            </a>
+            </button>
         <button class="libro agarrable thriller" name="accion" value="thriller" type="submit">
             <div class="thriller" id="thriller">Thriller</div>
         </button>
