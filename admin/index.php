@@ -11,7 +11,7 @@
 </head>
 <body>
 
-   <?php include('../template/header.php') ?>
+   <?php include('./template/header.php') ?>
 <div class="siseve">
 
     <div class="formcontenedor">
@@ -23,8 +23,8 @@
                             <?php echo $mensaje; ?>         
                         </div>
                     <?php } ?>
-                    <label for="DNI">DNI:</label>
-                    <input type="text" name="dni" id="dni" placeholder="DNI" required>
+                    <label for="Nombre">Nombre de usuario:</label>
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario" required>
                     <br>
                  
                     <label for="Contraseña">Contraseña:</label>
@@ -36,6 +36,6 @@
     </div>
 
 </div>  
-    <?php include('../template/footer.php') ?>
+    <?php include('./template/footer.php') ?>
 </body>
 </html>
