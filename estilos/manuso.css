@@ -48,14 +48,13 @@ h5{
 } 
 
 .Preguntas{
+    border: solid;
     display: flex;   
     justify-content: center;
     flex-direction: column;
-    height: 30%;
-    width: 40%;
+    width: 50%;
     position: relative;
-    top: 5rem;
-   
+    top: 10rem;
 }   
 
 

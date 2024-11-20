@@ -1,7 +1,7 @@
 <footer>
     <div id="contacto" class="footer-content">
         <h3>BIBLIOTECA ESCOLAR</h3>
-        <p>El mejor lugar para disfrutar de comidas ríquisimas y pasar momentos inolvidables. ¡Te esperamos!</p>
+        <p>Los mejores libros se encuentran aquí ¡Te esperamos!</p>
         <ul class="socials">
             <li><a href="https://www.facebook.com/?locale=es_LA"><img src="../img/BiFacebook.svg" alt="Facebook"></a></li>
             <li><a href="#"><img src="../img/WhhCallalt.svg" alt="Numero"></a>03385-406682</li>

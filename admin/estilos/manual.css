@@ -1,0 +1,127 @@
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(../../img/fondolibro.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+  }
+  
+   h1 {
+    text-align: center;
+    font-size: 2rem;   
+    color: #0a2849;    
+    margin: 0 0 20px 0;
+    font-weight: bold;  
+   }
+
+  .manual-container {
+    width: 90%;
+    max-width: 800px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.945); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 2%;
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+
+  .step-content h2 {
+    background: #1565c0; 
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .step-number {
+    width: 90px;
+    height: 90px;
+    background: #03a9f4; 
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-right: 15px;
+  }
+  
+  .step-content {
+    flex: 1;
+    background: #1565c0;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .carousel-slide {
+    display: none;
+  }
+  
+  .carousel-slide.active {
+    display: block;
+  }
+  
+  .carousel-slide img {
+    width: 70%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-slide p {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.808);
+    color: #1565c0;
+    border: none;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 0;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
