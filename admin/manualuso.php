@@ -6,6 +6,13 @@
     <title>Manual de uso</title>
 </head>
 <body>
+    <?php
+    session_start();
+    if (!isset($_SESSION['usuario'])) {
+        echo "No tiene autorización";
+        die();
+    }  
+    ?>
     
 </body>
 </html>

@@ -46,6 +46,7 @@
                 $usuario = $query->fetch(PDO::FETCH_LAZY);
                 session_start();
                 $_SESSION['usuario'] = $usuario['nombre_alumno'];
+                $_SESSION['id_usuario'] = $usuario['id_alumno'];
 
                 header('Location:libros.php');
             } else {

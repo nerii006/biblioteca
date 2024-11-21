@@ -107,10 +107,35 @@ header {
 #results {
     justify-content: center;
     width: 80%;
-    margin-top: 20px;
     padding: 10px;
     background-color: #f9f9f9; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     display: none;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#coincidencias {
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #222;
+    color: #efe;
+    width: 300px;
+    z-index: 10;
+}
+
+#coincidencias div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#coincidencias div:hover {
+    background-color: #444;
+    color: #efe;
 }

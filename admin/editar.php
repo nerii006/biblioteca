@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="../estilos/nav.css">
 </head>
 <body>
-
 <?php include('./template/header.php') ?>
+<?php 
+if (!isset($_SESSION['usuario'])) {
+    echo "No tiene autorización";
+    die();
+}  
+?>
 
     <div class="contenedor">
         <div class="form-container">
@@ -18,7 +23,9 @@
                 <div class="form-content">
                 <div class="left-form">
                     <div class="form-group">
-                        <input type="text" id="titulo" placeholder="Buscar libro"><br><br>
+                        <input type="text" id="searchInput" placeholder="Buscar libro" onkeyup="buscarLibro()">
+                        <div id="coincidencias"></div>
+                        <br><br>
                         <label for="book-title">Título</label>
                         <input type="text" id="book-title" placeholder="Ingresa el título del libro">
                     </div>
@@ -44,9 +51,9 @@
                 </div>
                 
                 <div class="button-group">
-                    <button type="button" class="save-btn" onclick="saveBook()">Guardar</button>
-                    <button type="button" class="delete-btn" onclick="deleteBook()">Eliminar</button>
-                    <button type="button" class="add-btn" onclick="addBook()">Agregar</button>
+                    <button type="button" class="save-btn">Guardar</button>
+                    <button type="button" class="delete-btn">Eliminar</button>
+                    <button type="button" class="add-btn">Agregar</button>
                 </div>
             </form>
         </div>

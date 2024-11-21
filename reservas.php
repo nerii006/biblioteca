@@ -11,31 +11,39 @@
 </head>
 <body>
 <?php include('template/header.php') ?>
-    
+<?php
+include('./conexion.php');
+$query = $conexion->prepare("SELECT * FROM libros 
+INNER JOIN reservas ON reservas.libro_id = libros.id_libro
+INNER JOIN autores ON autores.id_autor = libros.autor_id
+WHERE reservas.alumno_id=:id_alumno;");
+$query->bindParam(':id_alumno', $_SESSION['id_usuario']);
+$query->execute();
+$reservas = $query->fetchAll(PDO::FETCH_ASSOC);
+?>
 <div class="siseve">
 <div class="container">
     
-     <h1>Tus Reservas📚</h1>
+    <h1>Tus Reservas📚</h1>
+    <?php foreach ($reservas as $reserva) { ?>
     <div class="card">
         <div class="contenedorlibro">
             <div class="imagen">
-                <img src="./img/Dracula.webp" class="portadas">
+                <img src="./img/portadas/<?php echo $reserva['portada_libro'] ?>" class="portadas">
             </div>
             <div class="col-md-8">
             <div class="cuerpo">
-                <h3><b>Título: </b>Drácula</h3><br>
-                <h3><b>Autor: </b>Yo</h3><br>
-                <p class="card-text"><b>Descripción: </b>Novela gótica de terror que narra la historia del conde Drácula, un ser solitario y terrorífico que se traslada de Transilvania a Londres para conseguir sus fines.</p>
-                <button type="button" id="quitar" onclick="reservar()">Quitar</button>
-                <button type="button" onclick="reservar()">Reservar</button>
+                <h3><b>Título: </b><?php echo $reserva['nombre_libro']; ?></h3><br>
+                <h3><b>Autor: </b><?php echo $reserva['nombre_autor']; ?></h3><br>
+                <p class="card-text"><b>Descripción: </b><?php echo $reserva['desc_libro']; ?></p><br>
+                <a href="funcionEliminarReserva.php?id_reserva=<?php echo $reserva['id_reserva']; ?>" id="quitar">Quitar</a>
             </div>
             </div>
         </div>
     </div>
+    <?php } ?>
 </div>  
-</div> 
-
-<?php include('./template/footer.php') ?>
+</div>
 
 </body>
 </html>

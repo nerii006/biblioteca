@@ -25,6 +25,7 @@
                     $query->execute();
                     $usuario = $query->fetch(PDO::FETCH_LAZY);
                     $_SESSION['usuario'] = $usuario['nombre_alumno'];
+                    $_SESSION['id_usuario'] = $usuario['id_alumno'];
                     header('Location:libros.php');  
         } else {
             $mensaje = "ERROR: El DNI o contraseña ingresados son incorrectos";

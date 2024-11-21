@@ -52,18 +52,15 @@ b{
     width: 200px;
 }
 
-button{
+#quitar{
     margin-left: 160px;
-    font-size: 15px;
+    font-size: 1.2rem;
     background-color: #9992f5;
     border-radius: 10px;
     width: 100px;
     border: 2px solid rgb(32, 94, 151);
     height: 30px;
-    margin-top: 20px;
-}
-
-#quitar {
-    margin-top: 10%;
-    margin-left: 20%;  
+    padding: 4px;
+    text-decoration: none;
+    color: #f0f8ff;
 }

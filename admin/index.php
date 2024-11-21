@@ -11,7 +11,41 @@
 </head>
 <body>
 
-   <?php include('./template/header.php') ?>
+    <?php 
+    include('./template/header.php');
+    session_destroy();
+
+    include('../conexion.php');
+
+    if ($_POST) {
+        /* $query = $conexion->prepare("SELECT * FROM alumnos WHERE dni_alumno = :dni");
+        $query->bindParam(':dni', $_POST['dni']);
+        $query->execute();
+        $checkDNI = $query->fetch(PDO::FETCH_LAZY);
+        $query = $conexion->prepare("SELECT * FROM alumnos WHERE contrasena_alumno = :clave");
+        $query->bindParam(':clave', $_POST['password']);
+        $query->execute();
+        $checkPassword = $query->fetch(PDO::FETCH_LAZY); */
+        
+        $query = $conexion->prepare("SELECT * FROM administradores WHERE nombre_admin = :nombre AND contrasena_admin = :clave");
+        $query->bindParam(':nombre', $_POST['username']);
+        $query->bindParam(':clave', $_POST['password']);
+        $query->execute();
+        $usuario = $query->fetch(PDO::FETCH_LAZY);
+
+        if (!empty($usuario)) {
+                    session_start();
+                    $query = $conexion->prepare("SELECT * FROM administradores WHERE contrasena_admin = :clave");
+                    $query->bindParam(':clave', $_POST['password']);
+                    $query->execute();
+                    $usuario = $query->fetch(PDO::FETCH_LAZY);
+                    $_SESSION['usuario'] = $usuario['nombre_admin'];
+                    header('Location:editar.php');  
+        } else {
+            $mensaje = "ERROR: Los datos ingresados son incorrectos";
+        }
+    }
+    ?>
 <div class="siseve">
 
     <div class="formcontenedor">

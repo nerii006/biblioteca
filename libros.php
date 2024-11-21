@@ -108,10 +108,8 @@ switch ($accion) {
     <h1>Libros📖</h1>
     <form method="POST" class="libreria">
         <button class="libro agarrable terror" name="accion" value="terror" type="submit">
-            <a href="#listaLibros">
-                <div class="terror" id="terror">Terror</div>
-            </a>
-            </button>
+            <div class="terror" id="terror">Terror</div>
+        </button>
         <button class="libro agarrable thriller" name="accion" value="thriller" type="submit">
             <div class="thriller" id="thriller">Thriller</div>
         </button>
@@ -178,32 +176,40 @@ switch ($accion) {
         ?> 
         </h2>
         
-        <?php 
-        if (!empty($librosTerror)) {
-        foreach ($librosTerror as $libro) { 
-            $query = $conexion->prepare("SELECT * FROM autores INNER JOIN libros ON libros.autor_id = autores.id_autor WHERE libros.id_libro = :id");
-            $query->bindParam(':id', $libro['id_libro']);
-            $query->execute();
-            $autor = $query->fetch(PDO::FETCH_LAZY);
-        ?>
-        <div class="card">
-            <div class="contenedorlibro">
-                <div class="imagen">
-                    <img src="./img/Dracula.webp" class="portadas">
-                </div>
-                <div class="col-md-8">
-                    <div class="cuerpo">
-                        <h3><b>Título: </b><?php echo $libro['nombre_libro']; ?></h3><br>
-                        <h3><b>Autor: </b><?php echo $autor['nombre_autor']; ?></h3><br>
-                        <p class="card-text"><b>Descripción: </b><?php echo $libro['desc_libro']; ?></p>
-                        <button type="button" onclick="reservar()">Reservar</button>
+        <form method="POST">
+            <?php 
+            if (!empty($librosTerror)) {
+            foreach ($librosTerror as $libro) { 
+                $query = $conexion->prepare("SELECT * FROM autores INNER JOIN libros ON libros.autor_id = autores.id_autor WHERE libros.id_libro = :id");
+                $query->bindParam(':id', $libro['id_libro']);
+                $query->execute();
+                $autor = $query->fetch(PDO::FETCH_LAZY);
+                $query = $conexion->prepare("SELECT * FROM libros WHERE id_libro = :id");
+                $query->bindParam(':id', $libro['id_libro']);
+                $query->execute();
+                $img = $query->fetch(PDO::FETCH_LAZY);
+            ?>
+            <div class="card">
+                <div class="contenedorlibro">
+                    <div class="imagen">
+                        <img src="<?php echo './img/portadas/'.$img['portada_libro']; ?>" class="portadas">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="cuerpo">
+                            <h3><b>Título: </b><?php echo $libro['nombre_libro']; ?></h3><br>
+                            <h3><b>Autor: </b><?php echo $autor['nombre_autor']; ?></h3><br>
+                            <p class="card-text"><b>Descripción: </b><?php echo $libro['desc_libro']; ?></p><br>
+                            <!-- <input type="submit" name="reservaBtn" value="Reservar"></input> -->
+                            <a href="./funcionReservar.php?id_alumno=<?php echo $_SESSION['id_usuario']; ?>&id_libro=<?php echo $libro['id_libro']; ?>" id="btn_reservar">Reservar</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php }} ?>
+            <?php }} ?>
+        </form>
     </div> 
     </div>
+    
 
  
 
