@@ -18,7 +18,7 @@ if (!isset($_SESSION['usuario'])) {
 
     <div class="contenedor">
         <div class="form-container">
-            <h2>Editar Libro</h2><br>
+            <h3>Editar-Agregar-Eliminar Libros</h3><br>
             <form id="book-form">
                 <div class="form-content">
                 <div class="left-form">
