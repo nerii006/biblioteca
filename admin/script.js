@@ -6,7 +6,7 @@ function buscarLibro() {
     coinc_container.innerHTML = '';
 
     // Si el usuario no ha escrito nada, salir
-    if (query.length < 3) return; // por ejemplo, solo buscar después de 3 caracteres
+    if (query.length < 2) return; // por ejemplo, solo buscar después de 3 caracteres
 
     let libros = [];
 
@@ -37,7 +37,6 @@ function buscarLibro() {
     })
     .catch(error => console.error('Error al cargar los libros:', error));
 }
-
 
 /* function previewImage() {
     const coverInput = document.getElementById('book-cover').value;
