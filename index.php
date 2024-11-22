@@ -90,7 +90,7 @@
             <h4>Si ya tienes una cuenta haz <a href="inicioSesion.php">Click aquí</a> para Iniciar sesión</h4>
         </form> 
     </div>
-</div>
+</div><br><br>
     
     <?php include('./template/footer.php') ?>
 </body>

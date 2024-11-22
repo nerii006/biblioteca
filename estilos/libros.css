@@ -10,16 +10,18 @@ html{
 
 body {
     background: url(../img/fondolibro.jpg);
-    background-size: cover;
-    background-repeat: repeat;
     align-items: center;
     position: relative;
 }
 
 h1{
+    margin-top: 8%;
     color: rgb(255, 255, 255);
 }
 
+.bienvenida{
+    color: rgb(255, 255, 255);
+}
 /* .siseve {
     width: 800px;
     height: 100%;
@@ -64,6 +66,9 @@ h1{
     transform: rotateZ(180deg);
 }
 
+#btn_reservar:hover{
+    background-color: #4d87c0;
+}
 .libro {
     border:none;
     background: none;

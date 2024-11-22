@@ -21,9 +21,9 @@ body{
 }
 
 h1{
-  
     color:rgb(255, 255, 255)
 }
+
 .formcontenedor {
     display: flex;
     flex-direction: column;
@@ -61,10 +61,17 @@ h1{
 }
 
 button {
+    font-size: 1.1rem;
     background-color: #9992f5;
     border-radius: 10px;
-    width: 100px;
+    width: 120px;
     border: 2px solid rgb(32, 94, 151);
-    height: 30px;
-    margin-top: 20px;
+    height: 35px;
+    padding: 4px;
+    text-decoration: none;
+    color: #f0f8ff;
+}
+
+button:hover{
+    background-color: #4d87c0;
 }

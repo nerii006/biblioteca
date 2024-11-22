@@ -33,33 +33,38 @@
           </div>
       
           <div class="carousel-slide">
-            <img src="./img/color.png" alt="Paso 2: Seleccionar libro">
-            <p>Paso 2: Selecciona el libro que deseas editar de la lista.</p>
+            <img src="./img/editar2.png" alt="Paso 2: Seleccionar libro">
+            <p>Paso 2: Selecciona el libro que deseas editar de la lista y presiona la lupa azul.</p>
           </div>
 
           <div class="carousel-slide">
-            <img src="./img/editar3.png" alt="Paso 3: Cambiar título">
-            <p>Paso 3: Cambia el título del libro.</p>
+            <img src="./img/datolleno.png" alt="">
+            <p>Paso 3: Automáticamente se cargan todos los datos ingresados del libro para que puedas editarlos.</p>
           </div>
 
           <div class="carousel-slide">
-            <img src="./img/editar4.png" alt="Paso 4: Cambiar el autor">
-            <p>Paso 4: Cambia el autor del libro.</p>
+            <img src="./img/editar3.png" alt="">
+            <p>Paso 4: Cambia el título del libro.</p>
           </div>
 
           <div class="carousel-slide">
-            <img src="./img/editar5.png" alt="Paso 5: Cambiar descripción">
-            <p>Paso 5: Cambia la descripción del libro.</p>
+            <img src="./img/editar4.png" alt="">
+            <p>Paso 5: Cambia el autor del libro.</p>
           </div>
 
           <div class="carousel-slide">
-            <img src="./img/editar6.png" alt="Paso 6: Cambiar la portada">
-            <p>Paso 6: Cambia la portada del libro.</p>
+            <img src="./img/editar5.png" alt="">
+            <p>Paso 6: Cambia la descripción del libro.</p>
           </div>
 
           <div class="carousel-slide">
-            <img src="./img/editar7.png" alt="Paso 7: Guardar">
-            <p>Paso 7: Una vez realizados los cambios requeridos haz click en el botón "Guardar".</p>
+            <img src="./img/editar6.png" alt="">
+            <p>Paso 7: Cambia la portada del libro.</p>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="./img/editar7.png" alt="">
+            <p>Paso 8: Una vez realizados los cambios requeridos haz click en el botón "Guardar".</p>
           </div>
           
           <button class="prev-btn">⬅️</button>
@@ -75,7 +80,6 @@
       <div class="step-content">
         <h2>¿Cómo agregar un libro?</h2>
         <div class="carousel">
-          <!-- Slides -->
           <div class="carousel-slide active">
             <img src="./img/agregar1.png" alt="">
             <p>Paso 1: Para agregar un libro deberás PASAR DE LARGO el botón de buscar y directamente rellenar los campos.</p>
@@ -124,7 +128,7 @@
             <p>Paso 1: Busca el libro que deseas eliminar.</p>
           </div>
           <div class="carousel-slide">
-            <img src="./img/color.png" alt="">
+            <img src="./img/editar2.png" alt="">
             <p>Paso 2: Selecciona el libro que deseas eliminar de la lista.</p>
           </div>
           <div class="carousel-slide">

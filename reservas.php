@@ -25,6 +25,7 @@ $reservas = $query->fetchAll(PDO::FETCH_ASSOC);
 <div class="container">
     
     <h1>Tus Reservas📚</h1>
+    <h3 class="sub">Aquí encontrarás todos los libros que hayas reservados</h3>
     <?php foreach ($reservas as $reserva) { ?>
     <div class="card">
         <div class="contenedorlibro">
