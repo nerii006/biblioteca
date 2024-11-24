@@ -13,6 +13,7 @@
 <?php include('template/header.php') ?>
 <?php
 include('./conexion.php');
+
 $query = $conexion->prepare("SELECT * FROM libros 
 INNER JOIN reservas ON reservas.libro_id = libros.id_libro
 INNER JOIN autores ON autores.id_autor = libros.autor_id
@@ -24,8 +25,14 @@ $reservas = $query->fetchAll(PDO::FETCH_ASSOC);
 <div class="siseve">
 <div class="container">
     
+    <?php if (!isset($_SESSION['usuario'])) { ?>
+        <h1>Tus Reservas📚</h1>
+        <h3 class="sub" style="color:#ff4018">Debes asegurarte de <a href="./inicioSesion.php" style="color:#d53817">INICIAR SESIÓN</a> para reservar tus libros</h3>
+    
+    <?php 
+    die(); } ?>
     <h1>Tus Reservas📚</h1>
-    <h3 class="sub">Aquí encontrarás todos los libros que hayas reservados</h3>
+    <h3 class="sub">Aquí encontrarás todos los libros que hayas reservado</h3>
     <?php foreach ($reservas as $reserva) { ?>
     <div class="card">
         <div class="contenedorlibro">

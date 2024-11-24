@@ -3,7 +3,9 @@
         <div class="nombreUsuario">
             <?php
             session_start();
-            if (isset($_SESSION['usuario'])) {
+            if (isset($_SESSION['usuario']) && $_SESSION['usuario'] != 'admin') {
+                session_destroy();
+            } else if (isset($_SESSION['usuario'])) {
                 echo $_SESSION['usuario'];
             }
             ?>
@@ -13,7 +15,7 @@
 
             <a href="./editar.php">Administrar libros</a>
             <a href="./manualuso.php">Manual de uso</a>
-            <a href="">Ver reservas</a>
+            <a href="./verReservas.php">Ver reservas</a>
             <a href="cerrarSesion.php">Cerrar sesión</a>
         </div>
 

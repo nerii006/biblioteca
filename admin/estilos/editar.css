@@ -46,6 +46,11 @@ header {
 .left-form {
     width: 60%;
 }
+.right-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .form-group {
     margin-bottom: 15px;
@@ -93,7 +98,6 @@ header {
 
 .portada {
     width: 160px;
-    height: 210px;
     border: 1px solid #ccc;
 }
 .portada img {
@@ -111,6 +115,10 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.button-group button:disabled {
+    background-color: #52525298;
+    cursor:not-allowed;
 }
 
 .button-group .save-btn {

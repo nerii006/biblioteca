@@ -54,7 +54,7 @@
                     <div class="carousel">
                         <div class="carousel-slide active">
                             <img src="./img/inicio1.png" alt="">
-                            <p>Paso 1: Para poder iniciar sesión debes ingresar tu DNI sin guiones.</p>
+                            <p>Paso 1: Para poder iniciar sesión debes ingresar tu DNI sin puntos.</p>
                         </div>
                         <div class="carousel-slide">
                             <img src="./img/inicio2.png" alt="">
@@ -132,7 +132,6 @@
         </div>
     </div>
 
-    <?php include('template/header.php') ?>
     <script src="./admin/manual.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ if (!isset($_SESSION['usuario'])) {
 
 include('../conexion.php');
 
-if ($_POST) {
+
     $accion = (isset($_POST['accion'])?$_POST['accion']:"");
     $txtBusqueda = (isset($_POST['inputBuscar'])?$_POST['inputBuscar']:"");
 
@@ -34,14 +34,20 @@ if ($_POST) {
             $query->bindParam(':nombre_libro', $txtBusqueda);
             $query->execute();
             $autor = $query->fetch(PDO::FETCH_LAZY);
+            
+            $query = $conexion->prepare("SELECT * FROM generos INNER JOIN libros ON libros.genero_id = generos.id_genero WHERE libros.nombre_libro = :nombre_libro");
+            $query->bindParam(':nombre_libro', $txtBusqueda);
+            $query->execute();
+            $genero_ = $query->fetch(PDO::FETCH_LAZY);
 
             $titulo = isset($libro['nombre_libro'])?$libro['nombre_libro']:"";
             $descripcion = isset($libro['desc_libro'])?$libro['desc_libro']:"";
             $rutaImg = isset($libro['portada_libro'])?$libro['portada_libro']:"";
             $autorNombre = isset($autor['nombre_autor'])?$autor['nombre_autor']:"";
+            $genero = isset($genero_['genero'])?$genero_['genero']:"";
             $id_libro = isset($libro['id_libro'])?$libro['id_libro']:"";
             break;
-        /* case 'guardar':
+        /* case 'editar':
             $query = $conexion->prepare("SELECT * FROM libros WHERE id_libro = :id");
             $query->bindParam(':id', $id_libro);
             $query->execute();
@@ -51,14 +57,74 @@ if ($_POST) {
             $desc_libro = isset($_POST['descripcion'])?$_POST['descripcion']:"";
             $query = $conexion->prepare("UPDATE libros SET nombre_libro='',desc_libro='',autor_id='',portada_libro='' ")
             break; */
-        /* case 'agregar':
-            $txtTitulo = $_POST['titulo'];
-            $txtNombreAutor = $_POST['nombre_autor'];
-            $txtDesc = $_POST['descripcion'];
+        case 'agregar':
+            $txtTitulo = isset($_POST['titulo']) ? $_POST['titulo'] : "";
+    $txtNombreAutor = isset($_POST['nombre_autor']) ? $_POST['nombre_autor'] : "";
+    $txtDesc = isset($_POST['descripcion']) ? $_POST['descripcion'] : "";
+    $txtGenero = isset($_POST['generos']) ? $_POST['generos'] : "";
+    $img = isset($_FILES['portada']['name']) ? $_FILES['portada']['name'] : "";
 
-            $query = $conexion->prepare("INSERT INTO libros(") */
-        default: echo "nada";
+    // Definir nombre del archivo de imagen
+    $fecha = new DateTime();
+    $nombreArchivo = ($img != "") ? $fecha->getTimestamp() . "_" . $_FILES['portada']['name'] : "imagen.jpg";
+
+    $tmpImg = $_FILES['portada']['tmp_name'];
+    if ($tmpImg != "") {
+        move_uploaded_file($tmpImg, "../img/portadas/" . $nombreArchivo);
     }
+
+    // Verificar si el libro ya existe
+    $query = $conexion->prepare("SELECT * FROM libros WHERE nombre_libro = :nombre_libro");
+    $query->bindParam(':nombre_libro', $txtTitulo);
+    $query->execute();
+    $existe_libro = $query->fetch(PDO::FETCH_LAZY);
+
+    if (empty($existe_libro)) {
+        // Verificar si el autor ya existe
+        $query = $conexion->prepare("SELECT * FROM autores WHERE nombre_autor = :nombre_autor");
+        $query->bindParam(':nombre_autor', $txtNombreAutor);
+        $query->execute();
+        $existe_autor = $query->fetch(PDO::FETCH_LAZY);
+
+        if (empty($existe_autor)) {
+            // Insertar un nuevo autor
+            $query = $conexion->prepare("INSERT INTO autores(nombre_autor, nacion_id) VALUES (:nombre_autor, 1)");
+            $query->bindParam(':nombre_autor', $txtNombreAutor);
+            $query->execute();
+        }
+
+        // Obtener el ID del autor
+        $obtenerAutor = $conexion->prepare("SELECT * FROM autores WHERE nombre_autor = :nombre_autor");
+        $obtenerAutor->bindParam(':nombre_autor', $txtNombreAutor);
+        $obtenerAutor->execute();
+        $id_autor = $obtenerAutor->fetch(PDO::FETCH_LAZY)['id_autor'];
+
+        // Obtener el ID del género
+        $obtenerGenero = $conexion->prepare("SELECT * FROM generos WHERE genero = :genero");
+        $obtenerGenero->bindParam(':genero', $txtGenero);
+        $obtenerGenero->execute();
+        $id_genero = $obtenerGenero->fetch(PDO::FETCH_LAZY)['id_genero'];
+
+        // Insertar el libro
+        $query = $conexion->prepare("INSERT INTO libros(nombre_libro, desc_libro, autor_id, estado_id, genero_id, portada_libro) VALUES (:nombre_libro, :desc_libro, :autor_id, 1, :genero_id, :portada_libro)");
+        $query->bindParam(':nombre_libro', $txtTitulo);
+        $query->bindParam(':desc_libro', $txtDesc);
+        $query->bindParam(':autor_id', $id_autor);
+        $query->bindParam(':genero_id', $id_genero);
+        $query->bindParam(':portada_libro', $nombreArchivo);
+
+        $query->execute();
+    } else {
+        $mensaje_libroExiste = "Ya existe un libro con ese nombre";
+    }
+            
+           /*  $query = $conexion->prepare("INSERT INTO")
+            $query->bindParam(':img', $nombreArchivo);
+            
+            $query->execute();  */
+
+        default: echo "nada";
+    
 
 }
 ?>
@@ -80,8 +146,9 @@ if ($_POST) {
                                 
                         </div>
                         <div id="coincidencias"></div>
+                        <script src="./script.js"></script>
                         <br><br>
-                        <form id="book-form" method="POST">
+                        <form id="book-form" method="POST" enctype="multipart/form-data">
                         <label for="book-title">Título</label>
                         <input name="titulo" type="text" id="book-title" required placeholder="Ingresa el título del libro" <?php if(isset($titulo)) echo 'value="'.$titulo.'"';  ?>>
                     </div>
@@ -95,7 +162,7 @@ if ($_POST) {
                     </div>
                     <div class="form-group">
                         <label for="book-cover">Imagen de Portada</label>
-                        <input type="file" name="" id="">
+                        <input type="file" name="portada" id="portada">
                     </div>
                 </div>
 
@@ -104,14 +171,27 @@ if ($_POST) {
                     <div class="portada">
                         <img src="<?php if($rutaImg) echo '../img/portadas/'.$rutaImg; ?>" alt="">
                     </div>
+                    <br>
+                    <label for="generos">Selecciona un género</label>
+                    <?php 
+                    $query = $conexion->prepare("SELECT * FROM generos");
+                    $query->execute();
+                    $generos = $query->fetchAll(PDO::FETCH_ASSOC);
+                    if (!empty($generos)) {
+                    ?>
+                    <select name="generos" id="generos">
+                        <?php foreach ($generos as $g) { ?>
+                            <option value="<?php echo $g['genero']; ?>" <?php if(!empty($genero_)){if($g['id_genero'] == $genero_['id_genero']) { echo "selected"; }} ?>><?php echo $g['genero']; ?></option>
+                        <?php }} ?>
+                    </select>
                 </div>
 
                 </div>
                 
                 <div class="button-group">
-                    <button type="submit" class="save-btn" name="accion" value="guardar">Guardar</button>
-                    <button type="submit" class="delete-btn" name="accion" value="eliminar">Eliminar</button>
-                    <button type="submit" class="add-btn" name="accion" value="agregar">Agregar</button>
+                    <button type="submit" class="save-btn" name="accion" value="editar" <?php echo ($accion != "buscar") ? "disabled" : ""; ?>>Editar</button>
+                    <button type="submit" class="add-btn" name="accion" value="agregar" <?php echo ($accion == "buscar") ? "disabled" : ""; ?>>Agregar</button>
+                    <button type="submit" class="delete-btn" name="accion" value="eliminar" <?php echo ($accion != "buscar") ? "disabled" : ""; ?>>Eliminar</button>
                 </div>
             </form>
         </div>
@@ -122,7 +202,11 @@ if ($_POST) {
             <p id="result-description"><strong>Descripción:</strong> <span></span></p>
             <img id="result-cover" src="" alt="Portada" style="max-width: 100%; height: auto; display: none;">
         </div>
+        <?php 
+        if (isset($mensaje_libroExiste)) {
+            echo $mensaje_libroExiste;
+        }
+        ?>
     </div>
-    <script src="./script.js"></script>
 </body>
 </html>
